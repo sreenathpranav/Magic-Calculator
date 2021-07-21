@@ -16,11 +16,8 @@ This is an open-source project and Contains no ads or unnecessary permissions so
 
 ## Screenshorts
 
-![SplashScreen](/Screenshots/1.jpg?raw=true "1")
-![MainActivity](/Screenshots/2.jpg?raw=true "2")
-![ContactActivity](/Screenshots/3.jpg?raw=true "3")
-![Permision](/Screenshots/4.jpg?raw=true "4")
-![ContactIntent](/Screenshots/5.jpg?raw=true "5")
+<img src="Screenshots/1.jpg" width="200"><img src="Screenshots/2.jpg" width="200"><img src="Screenshots/3.jpg" width="200"><img src="Screenshots/5.jpg" width="200">
 
 ## MIT License
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
