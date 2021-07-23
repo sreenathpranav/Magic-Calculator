@@ -53,19 +53,20 @@ class MainActivity : AppCompatActivity() {
             binding.inputtext.append("8")
         }
         binding.btn9.setOnClickListener{
+
             binding.inputtext.append("9")
         }
         binding.btnPlus.setOnClickListener{
-            binding.inputtext.append(" + ")
+            binding.inputtext.append("+")
         }
         binding.btnMultiplication.setOnClickListener{
-            binding.inputtext.append(" * ")
+            binding.inputtext.append("*")
         }
         binding.btnMinus.setOnClickListener{
-            binding.inputtext.append(" - ")
+            binding.inputtext.append("-")
         }
         binding.btnDivide.setOnClickListener{
-            binding.inputtext.append(" / ")
+            binding.inputtext.append("/")
         }
         binding.btnDot.setOnClickListener{
             binding.inputtext.append(".")
@@ -77,22 +78,6 @@ class MainActivity : AppCompatActivity() {
             binding.inputtext.append(" ) ")
         }
 
-        binding.btnEqual.setOnClickListener {
-//shortclick
-            var expression= ExpressionBuilder(binding.inputtext.text.toString()).build()
-            val result = expression.evaluate()
-            val longresult= result.toLong()
-
-            if(result== longresult.toDouble()){
-                binding.outputext.text=longresult.toString()
-            }
-            else
-            {
-                binding.outputext.text=result.toString()
-            }
-
-        }
-
         binding.btnEqual.setOnLongClickListener(View.OnLongClickListener {
             Toast.makeText(this, "ButtonLongPressed", Toast.LENGTH_SHORT).show()
             true
@@ -100,26 +85,28 @@ class MainActivity : AppCompatActivity() {
             return@OnLongClickListener true
         })
 
-//        binding.btnEqual.setOnClickListener {
+
+        //prank feature
+        binding.btnEqual.setOnClickListener {
+
+            val bundle=intent.extras
+            val message= bundle!!.getString("phoneNo")
+            binding.outputext.text=message
+
+       }
+        //normal calculator function
+//            binding.btnEqual.setOnClickListener {
 //
-//            val result
-//            receiver_msg = findViewById<View>(R.id.received_value_id) as TextView
-//            // create the get Intent object
+//                var expression = ExpressionBuilder(binding.inputtext.text.toString()).build()
+//                val result = expression.evaluate()
+//                val longresult = result.toLong()
 //
-//            // create the get Intent object
-//            val intent = intent
-//
-//            // receive the value by getStringExtra() method
-//            // and key must be same which is send by first activity
-//
-//            // receive the value by getStringExtra() method
-//            // and key must be same which is send by first activity
-//            val str = intent.getStringExtra("message_key")
-//
-//            // display the string into textView
-//
-//            // display the string into textView
-//            result.setText(str)
-//        }
+//                if (result == longresult.toDouble()) {
+//                    binding.outputext.text = longresult.toString()
+//                } else {
+//                    binding.outputext.text = result.toString()
+//                }
+//            }
+
     }
 }
