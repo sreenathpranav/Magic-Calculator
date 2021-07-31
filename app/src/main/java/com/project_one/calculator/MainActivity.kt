@@ -1,14 +1,11 @@
-package com.example.calculator
+package com.project_one.calculator
 
-import android.R
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.calculator.databinding.ActivityMainBinding
-import net.objecthunter.exp4j.ExpressionBuilder
+import com.project_one.calculator.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
@@ -79,19 +76,22 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnEqual.setOnLongClickListener(View.OnLongClickListener {
-            Toast.makeText(this, "ButtonLongPressed", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Button is Long Pressed", Toast.LENGTH_SHORT).show()
             true
             startActivity(Intent(this@MainActivity, ContactActivity::class.java))
             return@OnLongClickListener true
         })
 
-
         //prank feature
         binding.btnEqual.setOnClickListener {
 
-            val bundle=intent.extras
-            val message= bundle!!.getString("phoneNo")
-            binding.outputext.text=message
+            try {
+                val bundle=intent.extras
+                val message= bundle!!.getString("phoneNo")
+                binding.outputext.text=message
+            }catch(ex: NullPointerException){
+                binding.outputext.text=""
+            }
 
        }
         //normal calculator function

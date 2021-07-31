@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.calculator">
+    package="com.project_one.calculator">
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
@@ -11,16 +11,16 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Calculator">
-        <activity android:name=".ContactActivity"></activity>
-        <activity android:name=".ContactActivity" />
-        <activity android:name=".SplashScreen">
+
+        <activity android:name="com.project_one.calculator.ContactActivity" />
+        <activity android:name="com.project_one.calculator.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name="com.project_one.calculator.MainActivity" />
     </application>
 
 </manifest>
