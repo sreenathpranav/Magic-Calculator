@@ -2,8 +2,10 @@
 
 A **fun calculator** with basic functions and a **pranking** feature
 
-To learn trick, watch this video [Made My First App in 7 Days](https://youtu.be/7Pal5lSGR90)
+[Download this app in PLAY STORE](https://play.google.com/store/apps/details?id=com.project_one.calculator)
 
+
+To learn trick, watch this video [Made My First App in 7 Days](https://youtu.be/7Pal5lSGR90)
 It has some really cool features.
 - Long Press '=' sign and click on the Show contacts button to explore additional settings.
 - Select your contact no of your friend that you want to prank and go back to calculator.
